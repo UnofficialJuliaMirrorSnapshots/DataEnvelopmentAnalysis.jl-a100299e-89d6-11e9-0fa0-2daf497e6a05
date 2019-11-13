@@ -3,7 +3,7 @@
     CostDEAModel
 An data structure representing a cost DEA model.
 """
-struct CostDEAModel <: AbstractEconomicDEAModel
+struct CostDEAModel <: AbstractCostDEAModel
     n::Int64
     m::Int64
     s::Int64
@@ -21,7 +21,7 @@ Compute cost efficiency using data envelopment analysis for
 inputs `X`, outputs `Y` and price of inputs `W`.
 
 # Optional Arguments
-- `rts=:CRS`: chooses variable returns to scale. For constant returns to scale choose `:CRS`.
+- `rts=:VRS`: chooses variable returns to scale. For constant returns to scale choose `:CRS`.
 
 # Examples
 ```jldoctest
